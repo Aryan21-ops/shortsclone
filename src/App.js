@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import VideoPlayer from './youtube';
+import video1 from './videos/video1.mp4'
+import video2 from './videos/video2.mp4'
+import video3 from './videos/video3.mp4'
+import video4 from './videos/video4.mp4'
+import video5 from './videos/video5.mp4'
 
-function App() {
+const App = () => {
+  const videos = [
+    { src: video1, title: 'Sanam Re #Love' },
+    { src: video2, title: 'Happiness#Masti' },
+    { src: video3, title: 'Nature my soul healer' },
+    { src: video4, title: 'Music in blood#junoon' },
+    { src: video5, title: 'Music #Passion' },
+    
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <VideoPlayer videos={videos} />
     </div>
   );
-}
+};
 
 export default App;
